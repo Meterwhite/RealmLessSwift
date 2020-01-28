@@ -13,6 +13,7 @@ pod 'SwiftRealm--'
 - 写事务将在离开当前作用域时自动提交.
 ### Writing scope
 ```swift
+import RealmLL
 A scope {
     let writing = RLLWriting()
     writing.auto()
