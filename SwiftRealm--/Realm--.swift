@@ -8,16 +8,16 @@
 
 import RealmSwift
 
-typealias RLLWritingBlock = (_ writing : RLLWriting) -> ()
+public typealias RLLWritingBlock = (_ writing : RLLWriting) -> ()
 
 // MARK: - Pool
-func realm_writing_pool(_ block : RLLWritingBlock) {
+public func realm_writing_pool(_ block : RLLWritingBlock) {
     block(RLLWriting())
 }
 
 // MARK: - Scope
 /// Realm less less
-class RLLWriting {
+public class RLLWriting {
     
     /// Debug log
     public static var delogEnable = true
@@ -75,52 +75,52 @@ class RLLWriting {
 }
 
 // MARK: - Datas
-extension RLLWriting {
+public extension RLLWriting {
     
     // MARK: - Select
-    public func objects<Element: Object>(_ type: Element.Type) -> Results<Element> {
+    func objects<Element: Object>(_ type: Element.Type) -> Results<Element> {
         return realm.objects(type)
     }
     
     // MARK: - Update
-    public func update(_ obj : Object) -> RLLWriting {
+    func update(_ obj : Object) -> RLLWriting {
         realm.add(obj, update: .modified)
         return self
     }
     
-    public func updates<T: Sequence>(_ objs: T) -> RLLWriting where T.Iterator.Element: Object {
+    func updates<T: Sequence>(_ objs: T) -> RLLWriting where T.Iterator.Element: Object {
         realm.add(objs, update: .modified)
         return self
     }
     
     // MARK: - Add
-    public func add(_ obj : Object) -> RLLWriting {
+    func add(_ obj : Object) -> RLLWriting {
         realm.add(obj)
         return self
     }
     
-    public func adds<T: Sequence>(_ objs: T) -> RLLWriting where T.Iterator.Element: Object {
+    func adds<T: Sequence>(_ objs: T) -> RLLWriting where T.Iterator.Element: Object {
         realm.add(objs)
         return self
     }
     
     // MARK: - Delete
-    public func delete(_ obj : Object) -> RLLWriting {
+    func delete(_ obj : Object) -> RLLWriting {
         realm.delete(obj)
         return self
     }
     
-    public func deletes<T: Sequence>(_ objs: T) -> RLLWriting where T.Iterator.Element: Object {
+    func deletes<T: Sequence>(_ objs: T) -> RLLWriting where T.Iterator.Element: Object {
         realm.delete(objs)
         return self
     }
     
-    public func deletes<Element: Object>(_ objs: List<Element>) -> RLLWriting {
+    func deletes<Element: Object>(_ objs: List<Element>) -> RLLWriting {
         realm.delete(objs)
         return self
     }
     
-    public func deletes<Element: Object>(_ objs: Results<Element>) -> RLLWriting {
+    func deletes<Element: Object>(_ objs: Results<Element>) -> RLLWriting {
         realm.delete(objs)
         return self
     }
