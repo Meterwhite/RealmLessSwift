@@ -45,7 +45,7 @@ public class RLLWriting {
     
     public var withoutNotifying : [NotificationToken]?
     
-    init() {
+    public init() {
         realm = try! Realm()
         if !realm.isInWriteTransaction {
             realm.beginWrite()

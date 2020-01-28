@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SwiftRealm--"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "Realm write extension.Prefect solution to reduce realm (Swift) tedious write commit coding."
   s.homepage     = "https://github.com/Meterwhite/SwiftRealm--"
   s.license      = "MIT"
