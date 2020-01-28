@@ -6,13 +6,14 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "Meterwhite" => "meterwhite@outlook.com" }
   s.source        = { :git => "https://github.com/Meterwhite/SwiftRealm--.git", :tag => s.version.to_s }
-  s.source_files  = "SwiftRealm--/**/*.{h,m}"
+  s.source_files  = "SwiftRealm--/*.swift"
   s.requires_arc  = true
+  s.swift_version = '4.0'
   
-  s.ios.deployment_target = "7.0"
-  s.osx.deployment_target = "10.9"
-  s.watchos.deployment_target = "2.0"
-  s.tvos.deployment_target = "9.0"
+  s.ios.deployment_target     = '8.0'
+  s.osx.deployment_target     = '10.9'
+  s.watchos.deployment_target = '2.0'
+  s.tvos.deployment_target    = '9.0'
   
   s.dependency "RealmSwift"
 end
