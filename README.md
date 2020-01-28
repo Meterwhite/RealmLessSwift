@@ -1,4 +1,4 @@
-# SwiftRealm--
+# Realm-- for swift
 ## Description
 * A solution to reduce realm (swift) tedious write commit coding.一套减少Realm写入事务代码量的三方解决方案。
 * No `closure`, no `beginWrite`, no `commitWrite`.You can return method anywhere.
@@ -27,7 +27,7 @@ A scope {
 ```swift
 realm_writing_pool { writing in
     let results = writing.objects(...)
-    writing.add[s](...).update[s](...).deletes(...)...
+    writing.add[s](...).update[s](...).delete[s](...)...
 }
 ```
 
