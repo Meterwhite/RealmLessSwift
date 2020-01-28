@@ -2,7 +2,7 @@
 ## Description
 * A solution to reduce realm (swift) tedious write commit coding.一套减少Realm写入事务代码量的三方解决方案。
 * No `closure`, no `beginWrite`, no `commitWrite`.You can return method anywhere.
-* [Realm--](https://github.com/Meterwhite/Realm-- "Realm--") for Objective-C
+* [Objective-C](https://github.com/Meterwhite/Realm-- "Realm--")
 
 ## CocoaPods
 ```
