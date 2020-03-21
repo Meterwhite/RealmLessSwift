@@ -1,19 +1,19 @@
-# Realm-- for swift
+# RealmLess for swift
 ## Description
 * A solution to reduce realm (swift) tedious write commit coding.一套减少Realm写入事务代码量的三方解决方案。
 * No `closure`, no `beginWrite`, no `commitWrite`.You can return method anywhere.
-* [Objective-C](https://github.com/Meterwhite/Realm-- "Realm--")
+* [Objective-C](https://github.com/Meterwhite/RealmLess "RealmLess")
 
 ## CocoaPods
 ```
-pod 'SwiftRealm--'
+pod 'RealmLessSwift'
 ```
 ## Realm commit scope
 - Realm transaction will be committed when leaving current scope.
 - 写事务将在离开当前作用域时自动提交.
 ### Writing scope
 ```swift
-import RealmLL
+import RealmLessSwift
 A scope {
     let writing = RLLWriting()
     writing.auto()
